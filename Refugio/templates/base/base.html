@@ -1,0 +1,28 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block extrahead %}
+    {% endblock %}
+    <meta charset="utf-8">
+    <title>{% block title %}document {% endblock %}</title>
+  </head>
+  <body>
+    {% block header %}
+    {% include 'base/header.html'%}
+    <h4>Este es el contenido del archivo base</h4>
+    {% endblock %}
+
+    {% block content %}
+    <h1>Soy el contenido de BASE</h1>
+    {% endblock %}
+
+    {% block footer%}
+    <h5>Soy el footer</h5>
+    {% endblock %}
+
+    {% block extrajs %}
+    {% endblock %}
+  </body>
+</html>
